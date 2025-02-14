@@ -461,7 +461,7 @@ services:
     environment:
       PGUSER: postgres
       POSTGRES_PASSWORD: difyai123456
-      POSTGRES_DB: POSTGRES_DB:-dify
+      POSTGRES_DB: dify
       PGDATA: ${PGDATA:-/var/lib/postgresql/data/pgdata}
     command: >
       postgres -c 'max_connections=${POSTGRES_MAX_CONNECTIONS:-100}'
