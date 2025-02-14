@@ -64,7 +64,7 @@ services:
       PGDATA: $PGDATA
     command: >
       postgres -c 'max_connections=$POSTGRES_MAX_CONNECTIONS'
-               -c 'shared_buffers=$POSTGRES_SHARED_BUFFERS:-128MB'
+               -c 'shared_buffers=$POSTGRES_SHARED_BUFFERS'
                -c 'work_mem=$POSTGRES_WORK_MEM'
                -c 'maintenance_work_mem=$POSTGRES_MAINTENANCE_WORK_MEM'
                -c 'effective_cache_size=$POSTGRES_EFFECTIVE_CACHE_SIZE'
@@ -295,7 +295,7 @@ services:
       # The password for the default postgres user.
       POSTGRES_PASSWORD: $PGVECTOR_POSTGRES_PASSWORD
       # The name of the default postgres database.
-      POSTGRES_DB: $PGVECTOR_POSTGRES_DB:
+      POSTGRES_DB: $PGVECTOR_POSTGRES_DB
       # postgres data directory
       PGDATA: $PGVECTOR_PGDATA
     volumes:
